@@ -343,13 +343,13 @@ The draft repeatedly describes the results in qualitative terms, but it does not
 - Effect sizes;
 - Or item-level evaluator judgments.
 
-\newpage
-
 This limitation should not be phrased as proof that the authors never produced numerical results. A more defensible statement is:
 
 > The body of the supplied first draft does not reproduce the numerical benchmarking results, and therefore the magnitude and robustness of the reported differences cannot be assessed from the manuscript text alone.
 
 If the benchmark attachment exists, it should be incorporated into the archival record and cited explicitly.
+
+\newpage
 
 ## 11.2 Missing experimental detail
 
@@ -358,8 +358,6 @@ A publishable empirical paper should allow another researcher to reconstruct the
 - Data: exact dataset composition and version; immutable identifiers or hashes; cleaning and deduplication procedures; train/validation/test split; document-level contamination controls.
 - Training: model checkpoints; LoRA and quantization configuration; learning rate, batch size, gradient accumulation, epochs or steps, sequence length, optimizer, and random seeds; hardware and software versions.
 - Evaluation: evaluation prompts and evaluator model/version; evaluation temperature and number of runs; scoring rubric and evaluator instructions; blinding and ordering procedures; raw evaluation results.
-
-\newpage
 
 The draft claims that all parameters were “meticulously documented for transparency and reproducibility.” Yet the supplied first draft contains unresolved placeholders and does not itself provide the complete configuration necessary to reproduce the evaluation.
 
