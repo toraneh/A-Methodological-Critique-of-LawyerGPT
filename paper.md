@@ -5,6 +5,9 @@ date: "2 October 2026"
 fontsize: 12pt
 geometry: margin=1in
 linestretch: 1.5
+header-includes: |
+  \usepackage{etoolbox}
+  \AtBeginEnvironment{longtable}{\footnotesize}
 ---
 
 # Abstract
@@ -81,7 +84,7 @@ A useful way to assess the draft is to separate the claims made by the authors f
 
 
 | Manuscript claim                                | Evidence described in the draft                                                                                                 | What the evidence establishes                                                                                                                 |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | “Significant superiority” over existing LLMs    | Qualitative descriptions of model outputs and comparative assertions; numerical results are not reproduced in the supplied text | The direction and magnitude of any performance difference cannot be independently assessed from the supplied text                             |
 | GPT-4 provided an “unbiased assessment”         | GPT-4 was used as the evaluator                                                                                                 | GPT-4 was used as an automated evaluator; procedural independence and absence of systematic evaluator effects are not established             |
 | “Advanced level of comprehension and reasoning” | Qualitative GPT-4 evaluation of model responses                                                                                 | The statement reflects an evaluator judgment, not independent legal validation                                                                |
@@ -284,7 +287,7 @@ Without operational definitions, the benchmark cannot be reliably reproduced. A 
 
 
 | Criterion         | Example operational definition                                                              |
-| ----------------- | ------------------------------------------------------------------------------------------- |
+| -------------------------- | -------------------------------------------------------------------------------- |
 | Factual accuracy  | Whether factual assertions agree with the supplied or authoritative source                  |
 | Legal correctness | Whether the response states the applicable legal rule accurately                            |
 | Authority         | Whether cited cases or statutes actually support the proposition for which they are cited   |
@@ -683,7 +686,7 @@ A practical expert rubric could use a 0–4 scale:
 
 
 | Criterion         | 0                              | 2                        | 4                                           |
-| ----------------- | ------------------------------ | ------------------------ | ------------------------------------------- |
+| ------------------------ | -------------------------- | -------------------- | ---------------------------------- |
 | Factual accuracy  | Materially false               | Some errors              | No material factual errors                  |
 | Legal correctness | Materially incorrect           | Partially correct        | Correct legal rule/application              |
 | Authority         | Unsupported or fabricated      | Partially appropriate    | Authorities accurately support claims       |
