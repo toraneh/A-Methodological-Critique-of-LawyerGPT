@@ -378,7 +378,24 @@ Such evidence would provide substantially stronger support for claims about lega
 
 The authors state that they selected Articles 12, 14, 15, 19, and 21 of the Constitution of India and incorporated landmark cases predominantly relating to those provisions. They report selecting approximately 50 cases and generating approximately 3,300 prompts.
 
-This is a valid starting point for a pilot study. It is not equivalent to broad coverage of Indian law. Indian law extends across many domains, including criminal law, civil procedure, criminal procedure, evidence, contract, property, family law, taxation, corporate law, labour law, administrative law, environmental law, commercial law, intellectual property, consumer law, and data protection.
+This is a valid starting point for a pilot study. It is not equivalent to broad coverage of Indian law. Indian law extends across many domains, including:
+
+- criminal law
+- civil procedure 
+- criminal procedure
+- evidence
+- contract
+- property 
+- family law 
+- taxation 
+- corporate law
+- labour law 
+- administrative law
+- environmental law
+- commercial law 
+- intellectual property
+- consumer law
+- data protection.
 
 The draft should therefore distinguish between:
 
