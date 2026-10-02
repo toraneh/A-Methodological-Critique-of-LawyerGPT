@@ -51,6 +51,8 @@ The critique also considers publicly accessible project artifacts where they pro
 
 The goal is not to argue that the models cannot perform legal tasks. The goal is to determine whether the evidence presented is sufficient for the comparative and capability claims made in the draft. This paper is intentionally limited to the first-draft manuscript as supplied; it does not assume that later versions, supplementary materials, private evaluation files, or subsequent experiments contain the same omissions.
 
+\newpage
+
 # 3. Summary of the Main Methodological Concerns
 
 
@@ -383,19 +385,19 @@ This is a valid starting point for a pilot study. It is not equivalent to broad 
 - criminal law
 - civil procedure 
 - criminal procedure
-- evidence
-- contract
-- property 
+- evidence law
+- contract law
+- property law
 - family law 
-- taxation 
+- taxation law
 - corporate law
 - labour law 
 - administrative law
 - environmental law
 - commercial law 
-- intellectual property
+- intellectual property law
 - consumer law
-- data protection.
+- data protection law
 
 The draft should therefore distinguish between:
 
