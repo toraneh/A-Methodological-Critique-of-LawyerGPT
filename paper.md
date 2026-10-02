@@ -717,6 +717,8 @@ Have multiple qualified legal-domain evaluators score a representative subset. T
 
 Evaluators should not know which model generated a response. For pairwise evaluation, response order should be randomized. Repeated evaluation with reversed order can be used to estimate order sensitivity.
 
+\newpage
+
 ## 24.5 Report raw results
 
 Provide the number of examples; mean and, where appropriate, median scores; category-level and item-level results; error rates; confidence intervals; effect sizes; human-versus-LLM agreement; and representative failure cases.
@@ -735,7 +737,7 @@ A sample of synthetic examples should be independently checked against primary l
 
 ## 24.9 Freeze dataset versions
 
-> Every reported model should be associated with a fixed dataset version and evaluation version (model checkpoint, dataset version, and evaluation version bound together), identified by immutable identifiers or cryptographic hashes where possible.
+Every reported model should be associated with a fixed dataset version and evaluation version (model checkpoint, dataset version, and evaluation version bound together), identified by immutable identifiers or cryptographic hashes where possible.
 
 ## 24.10 Report temporal validity
 
