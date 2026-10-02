@@ -424,12 +424,12 @@ This sentence indicates that the training corpus was not fixed across iterations
 The publicly identifiable artifacts include:
 
 
-| Artifact                                       | Approximate size | Claimed role                        | Public identifier                                     |
-| ---------------------------------------------- | ----------------: | ----------------------------------- | ----------------------------------------------------- |
-| Lawyer\_GPT\_India                             | 150              | Initial question-answer pairs       | nisaar/Lawyer\_GPT\_India                             |
-| Constitution\_Of\_India\_Instruction\_Set      | 933              | GPT-4-guided instruction set        | nisaar/Constitution\_Of\_India\_Instruction\_Set      |
-| Articles\_Constitution\_3300\_Instruction\_Set | \~3.3k           | Article-derived instruction dataset | nisaar/Articles\_Constitution\_3300\_Instruction\_Set |
-| LLAMA2\_Legal\_Dataset\_4.4k\_Instructions     | \~4.4k           | Llama 2-format legal dataset        | nisaar/LLAMA2\_Legal\_Dataset\_4.4k\_Instructions     |
+   Artifact | Approx. size | Claimed role | Public identifier |
+ | ----------------------- | -----------: | -------------------- | ------------------------- |
+ | Lawyer\allowbreak\_\allowbreak GPT\allowbreak\_\allowbreak India | 150 | Initial question-answer pairs | nisaar/\allowbreak Lawyer\allowbreak\_\allowbreak GPT\allowbreak\_\allowbreak India |
+ | Constitution\allowbreak\_\allowbreak Of\allowbreak\_\allowbreak India\allowbreak\_\allowbreak Instruction\allowbreak\_\allowbreak Set | 933 | GPT-4-guided instruction set | nisaar/\allowbreak Constitution\allowbreak\_\allowbreak Of\allowbreak\_\allowbreak India\allowbreak\_\allowbreak Instruction\allowbreak\_\allowbreak Set |
+ | Articles\allowbreak\_\allowbreak Constitution\allowbreak\_\allowbreak 3300\allowbreak\_\allowbreak Instruction\allowbreak\_\allowbreak Set | ~3.3k | Article-derived instruction dataset | nisaar/\allowbreak Articles\allowbreak\_\allowbreak Constitution\allowbreak\_\allowbreak 3300\allowbreak\_\allowbreak Instruction\allowbreak\_\allowbreak Set |
+ | LLAMA2\allowbreak\_\allowbreak Legal\allowbreak\_\allowbreak Dataset\allowbreak\_\allowbreak 4.4k\allowbreak\_\allowbreak Instructions | ~4.4k | Llama 2-format legal dataset | nisaar/\allowbreak LLAMA2\allowbreak\_\allowbreak Legal\allowbreak\_\allowbreak Dataset\allowbreak\_\allowbreak 4.4k\allowbreak\_\allowbreak Instructions |
 
 
 The table lists only artifacts confirmed in the public repository at the time of writing. Additional artifacts reported in connection with the project (including a small testing split and intermediate Llama 2-format versions) could not be confirmed in the public record and should be verified against dataset cards and commit history before publication. Row counts above should likewise be confirmed against the dataset cards before quantitative reliance.
