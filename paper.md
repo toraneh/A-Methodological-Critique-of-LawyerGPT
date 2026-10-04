@@ -22,13 +22,13 @@ The draft’s strongest claims—“significant superiority,” “deep and dire
 
 # 1. Introduction
 
-Large language models (LLMs) have attracted substantial attention for domain adaptation, including legal applications, and prior work has adapted LLMs to legal corpora in various ways, from legal-domain encoders to general-purpose instruction-following systems. Legal-domain adaptation is difficult because legal texts rely on specialized terminology, jurisdiction-specific doctrine, dense citation structures, temporally changing rules, and distinctions between factual description, legal authority, interpretation, and argumentation.
+Large language models (LLMs) have attracted substantial attention for domain adaptation, including legal applications. Prior work has adapted LLMs to legal corpora in various ways, ranging from legal-domain encoders to general-purpose instruction-following systems. Such efforts are attractive because legal tasks are often text-heavy, structured, and knowledge-intensive, and because practical legal assistance can benefit from models that retrieve, interpret, and apply legal information. Legal-domain adaptation is difficult, however, because legal texts rely on specialized terminology, jurisdiction-specific doctrine, dense citation structures, temporally changing rules, and distinctions between factual description, legal authority, interpretation, and argumentation.
 
-These features make legal evaluation materially different from ordinary text-generation assessment. A response may be fluent and coherent while nevertheless misstating a legal rule, citing an irrelevant authority, relying on an outdated law, or drawing an unsupported conclusion. For this reason, legal performance should not be inferred solely from writing quality or stylistic polish. It must be evaluated in ways that distinguish linguistic quality from legal correctness and familiarity with source material from true generalization.
+These features make legal evaluation materially different from ordinary text-generation assessment. A response may be fluent, coherent, and confident while nevertheless misstating a legal rule, citing an irrelevant authority, relying on an outdated law, or substituting plausible legal prose for a defensible conclusion. For this reason, legal performance should not be inferred solely from writing quality or stylistic polish. It must be evaluated in ways that distinguish linguistic quality from legal correctness, and familiarity with source material from true generalization.
 
 The LawyerGPT draft investigates this problem by fine-tuning Falcon-7B-instruct (the draft’s stylization) and Llama 2 on a dataset constructed from Indian legal materials. The first draft describes a pipeline involving manually curated prompts, synthetic instruction generation, legal-document summarization, and instruction tuning. It reports benchmarking against GPT-3.5-turbo, GPT-4, and Claude, with GPT-4 serving as the principal evaluator.
 
-The project addresses a legitimate research question: whether relatively compact open models can be adapted to Indian legal material using a targeted instruction-tuning corpus. The use of Indian legal sources and the attempt to construct a domain-specific instruction set are sensible research directions. However, the strength of the manuscript’s conclusions exceeds what the experimental methodology described in the first draft can cleanly establish.
+The project addresses a legitimate research question: whether relatively compact open models can be adapted to Indian legal material using a targeted instruction-tuning corpus. The use of Indian legal sources is a meaningful contribution to a research area often dominated by common-law and English-language corpora, and the attempt to construct a domain-specific instruction set is a sensible research direction. However, the strength of the manuscript’s conclusions exceeds what the experimental methodology described in the first draft can cleanly establish.
 
 Several design features are especially consequential. The authors state that GPT-4 was used during dataset construction, including the transformation of legal material into instruction-input-output examples. They also report that summarization of selected constitutional articles was executed using GPT-3.5-turbo, GPT-4, and Claude, with approximately 40% of that data generated using GPT-3.5-turbo, 40% using GPT-4, and 20% using Claude. The draft does not specify precisely which corpus these proportions describe, a point examined in Section 16. The draft further states that the test set contains questions extracted from the training dataset, alongside general-knowledge questions, hypothetical questions, and questions drawn from unseen data.
 
@@ -38,13 +38,15 @@ These design choices do not necessarily invalidate the project. But they impose 
 
 This paper therefore provides a methodological critique of the study as presented in its 10 August 2023 draft. The aim is constructive: to separate what the reported methodology directly supports from what requires qualification, and to specify what additional evaluation work would be necessary to justify stronger comparative claims.
 
+The critique proceeds in four parts. It first summarizes the main methodological issues. It then examines the draft’s core evidentiary claims in relation to its own design. It next evaluates the implications of evaluator dependence, training-evaluation overlap, benchmark composition, and missing reproducibility detail. Finally, it outlines a more defensible interpretation of the project and a stronger experimental revision.
+
 \newpage
 
 # 2. Scope and Method of the Critique
 
-This critique concerns the manuscript as supplied in its first-draft form, dated 10 August 2023. It does not attempt to reproduce the training procedure, retrain the models independently, or independently evaluate the released model checkpoints.
+This critique concerns the manuscript as supplied in its first-draft form, dated 10 August 2023. It does not attempt to reproduce the training procedure, retrain the models independently, or independently evaluate the released model checkpoints. Its aim is narrower but important: to determine whether the manuscript’s methodological description supports the comparative and capability claims it makes.
 
-The analysis begins with close textual examination of the supplied manuscript. Claims about dataset construction, evaluation composition, model comparison, and experimental procedure are treated as valid where the manuscript explicitly describes them. Methodological implications are identified separately from empirical claims.
+The analysis begins with close textual examination of the supplied manuscript. Claims about dataset construction, evaluation composition, model comparison, and experimental procedure are treated as valid where the manuscript explicitly describes them, and methodological implications are identified separately from empirical claims. The focus is not on whether the reported outputs appear persuasive in isolation; it is on whether the design described in the draft is capable of supporting the level of inference that the authors draw from it.
 
 The critique also considers publicly accessible project artifacts where they provide additional information about dataset composition, provenance, or versioning. These artifacts are not assumed to be identical to every dataset version used in every experiment unless that correspondence can be established. A later public artifact may differ from the exact corpus used in an earlier experiment. Accordingly, the critique distinguishes between:
 
@@ -116,8 +118,6 @@ The draft states that GPT-4 was used during dataset construction. Specifically, 
 Later, in the results section, the authors state:
 
 > “By employing GPT-4 as the evaluator of the results produced by the inferenced \[sic\] models, we ensured an unbiased assessment of our model’s performance.”
-
-\newpage
 
 The same model family therefore contributes substantially to the construction of the training distribution and is subsequently used as the principal evaluator of the resulting model outputs.
 
